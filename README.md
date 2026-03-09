@@ -19,7 +19,7 @@ Kaggle-House-Prices-Prediction-Using-Sklearn
 │ └── house_price_model.ipynb
 │
 ├── model/ # Saved trained model
-│ └── house_price_model.h5
+│ └── ensemble_model.pkl
 │
 ├── submission/ # Kaggle submission files
 │ └── submission.csv
@@ -109,15 +109,16 @@ Although **XGBoost achieved the lowest RMSE individually**, the **Ensemble Model
 Residual density analysis showed that the ensemble produced a **higher concentration of near-zero errors**, indicating **more stable and reliable predictions** on unseen data.
 
 ---
-
 ## 📈 Visualizations
 
-*(Add your saved images from notebook here for better presentation)*
+- **Actual vs Predicted Prices (Random Forest)**  
+  ![Actual vs Predicted](images/rf.png)
 
-- **Actual vs Predicted Prices:** `images/actual_vs_predicted.png`  
-- **Residual Distribution:** `images/residual_distribution.png`  
-- **Model Comparison:** `images/model_comparison.png`  
+- **Actual vs Predicted Prices (XGBoost)**  
+  ![Residuals](images/xgb.png)
 
+- **Model Comparison**  
+  ![Comparison](images/Models_Comparison.png)
 ---
 
 ## 🚀 How to Run
