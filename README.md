@@ -7,7 +7,7 @@ Machine learning pipeline for predicting house prices using **Random Forest, XGB
 ---
 
 ## 📁 Folder Structure
-
+```
 
 Kaggle-House-Prices-Prediction-Using-Sklearn
 │
@@ -26,7 +26,7 @@ Kaggle-House-Prices-Prediction-Using-Sklearn
 │
 ├── requirements.txt # Project dependencies
 └── README.md # Project documentation
-
+```
 
 ---
 
@@ -146,6 +146,7 @@ download the Kaggle dataset
 train the models
 
 generate submission.csv
+```
 ---
 ## 🛠 Technologies Used
 
