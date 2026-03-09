@@ -117,7 +117,7 @@ Residual density analysis showed that the ensemble produced a **higher concentra
 - **Actual vs Predicted Prices (XGBoost)**  
   ![Residuals](images/xgb.png)
 
-- **Model Comparison**  
+- **Models Comparison**  
   ![Comparison](images/Models_Comparison.png)
 ---
 
