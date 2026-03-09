@@ -2,7 +2,7 @@
 ---
 
 ## 📁 Folder Structure
-Kaggle-House-Prices-Prediction-Using-Keras/
+Kaggle-House-Prices-Prediction-Using-Sklearn/
 ```
 ├── data/                     # Contains Kaggle train.csv and test.csv
 │   ├── train.csv
@@ -32,7 +32,7 @@ The dataset includes 79 explanatory variables describing almost every aspect of 
 ---
 ## ⚙️ Machine Learning Pipeline
 
-### 1. Data Preprocessing
+### 🗂 1. Data Preprocessing
 To ensure the models receive clean, standardized data, the following steps were implemented:
 * **Target Transformation:** Applied `np.log1p` to the `SalePrice` to handle right-skewness and normalize the distribution.
 * **Categorical Encoding:** Utilized One-Hot Encoding (`pd.get_dummies`) for categorical features.
@@ -40,7 +40,7 @@ To ensure the models receive clean, standardized data, the following steps were 
 * **Imputation:** Handled missing numerical and encoded categorical values using a median strategy (`SimpleImputer`).
 * **Feature Scaling:** Standardized all features to have a mean of 0 and standard deviation of 1 (`StandardScaler`).
 ---
-### 2. Modeling Strategy
+### 🧠 2. Modeling Strategy
 Several base models were cross-validated (Linear Regression, Decision Tree, SVM). The final architecture focused on tuning two advanced tree-based models and combining them:
 
 * **Random Forest Regressor:** Built with 500 estimators and strict depth limits (`max_depth=20`, `min_samples_leaf=5`) to act as a highly stable, low-variance baseline.
@@ -48,7 +48,7 @@ Several base models were cross-validated (Linear Regression, Decision Tree, SVM)
 * **Hybrid Ensemble (The Champion):** A `VotingRegressor` combining the Random Forest and XGBoost models. XGBoost was given a higher weight (`weights=[1, 2]`) to prioritize its accuracy, while the Random Forest acted as a stabilizer against outliers.
 ---
 
-### 3. Evaluation & Results
+### 📊 3. Evaluation & Results
 Models were evaluated using **Root Mean Squared Error (RMSE)** on the log-transformed prices and through **Residual Density Analysis**.
 
 * **Random Forest RMSE:** ~0.1526
@@ -56,7 +56,7 @@ Models were evaluated using **Root Mean Squared Error (RMSE)** on the log-transf
 * **Ensemble RMSE:** ~0.1350
 ---
 
-**Conclusion:** While XGBoost achieved a slightly lower absolute RMSE, the **Ensemble Model** was selected as the final production model. Residual analysis curves demonstrated that the Ensemble had the highest density of near-zero errors, making it the most reliable and consistent predictor for unseen data.
+**Conclusion:**  While XGBoost achieved a slightly lower absolute RMSE, the **Ensemble Model** was selected as the final production model. Residual analysis curves demonstrated that the Ensemble had the highest density of near-zero errors, making it the most reliable and consistent predictor for unseen data.
 ---
 
 ## 🚀 How to Run
