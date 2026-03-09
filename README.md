@@ -158,7 +158,8 @@ Scikit-learn
 
 XGBoost
 
-TensorFlow (for reproducibility)
+TensorFlow 
 
 Matplotlib, Seaborn
+
 ---
